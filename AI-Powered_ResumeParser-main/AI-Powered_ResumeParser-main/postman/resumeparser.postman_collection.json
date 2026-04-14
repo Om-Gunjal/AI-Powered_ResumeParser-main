@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "8e4145d3-008d-45f6-9a84-0ae477ab94ef",
+		"name": "resumeparser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41860577"
+	},
+	"item": [
+		{
+			"name": "health",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"new_user_1\",\r\n    \"password\": \"new_password\",\r\n    \"confirmPassword\": \"new_password\",\r\n    \"role\": \"tester\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "madison",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resumeText\": \"Madison Dalmado\\r\\nBaltimore, MD | 410-555-0195 | madisondalmado@email.com\\r\\nSummary\\r\\n&nbsp;\\r\\nExperienced data professional with over 10 years of experience in the technology and B2B industries. Seeking a role as a Lead Data Scientist with Bartell Inc.\\r\\nEducation\\r\\n&nbsp;\\r\\nEast Virginia University\\r\\nMaster's Degree in Data Analytics\\r\\nEast Virginia University\\r\\nBachelor's of Science in Mathematics\\r\\nExperience\\r\\n&nbsp;\\r\\nHill Inc., Lead Data Scientist\\r\\nMarch 2016 - Current\\r\\nLeading a team of data professionals to drive data-based decision-making efforts\\r\\nCommunicating with key stakeholders to ensure information is available\\r\\nWriting reports based on findings from data collection and analysis\\r\\nBuilding relationships with professionals to increase productivity and decrease reporting errors\\r\\nDesigning innovative technologies to analyze data, making our processes more efficient\\r\\nHill Inc., Data Scientist\\r\\nMay 2015 \\u2013 March 2016\\r\\nCreating new technologies to aid in data collection and pattern recognition\\r\\nCommunication with other data professionals to collect and analyze data\\r\\nWriting reports based on trends and patterns in my sets of data\\r\\nHarness Inc., Data Analyst\\r\\nMay 2018 \\u2013 June 2019\\r\\nCollecting data to use in the decision-making process\\r\\nWriting reports for other data professionals to use for data analysis\\r\\nBuilding databases for data collection and protection\\r\\nCertifications\\r\\n&nbsp;\\r\\nSenior Data Scientist, DASCA - 2027\\r\\nData Science Professional, IBM - 2021\\r\\nAdvanced Analytics Professional, SAS - 2020\\r\\nSkills\\r\\n&nbsp;\\r\\nTechnology\\r\\nCommunication\\r\\nData analysis\\r\\nLeadership\\r\\nTeaching\\r\\nEmpathy\\r\\nReporting\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ivy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resumeText\": \"Ivy Haddington\\r\\nChicago, IL | 312-555-0174 | ihaddington@email.com\\r\\nSummary\\r\\n&nbsp;\\r\\nBeginner-level Cook with three years of experience in fast-food restaurants and hotel dining. Excellent skills in food preparation and cleanliness and ability to learn new procedures rapidly.\\r\\nEducation\\r\\n&nbsp;\\r\\nGreen Line High School\\r\\nHigh School Diploma\\r\\nExperience\\r\\n&nbsp;\\r\\nRiverside Plaza Hotel, Chicago, IL, Cook\\r\\nApril 2021 \\u2013 Current\\r\\nPrepare breakfast food for the hotel's free breakfast each day\\r\\nRespond to guest requests by preparing food for room service orders\\r\\nCollaborate with other cooks in the kitchen to plan menu items for dinner service\\r\\nHelp the head chef develop menus for seasonal events, like Mother's Day brunch and Thanksgiving dinner\\r\\nEnsure that the kitchen remains sanitized and free of waste and clutter after each meal service\\r\\nBurger Town, Chicago, IL, Cook\\r\\nJan 2020 \\u2013 April 2021\\r\\nPrepared food for customer orders, including specialty burgers, milkshakes and side dishes\\r\\nUsed Burger Town's recipe handbook to prepare recipes according to the company's standard\\r\\nWorked opening and late-night shifts that involved opening and closing the store\\r\\nBrandy's Burgers, Chicago, IL, Cook\\r\\nJune 2019 \\u2013 Jan 2020\\r\\nChecked the freezer and refrigerator temperatures at the beginning of each day to ensure they were at a safe level of coldness\\r\\nPrepared food for customer orders, including burgers, sandwiches and fries\\r\\nMaintained the fryer and stove by regularly removing waste and sanitizing them after each day\\r\\nCertifications\\r\\n&nbsp;\\r\\nCertified Foodservice Professional (CFSP)\\r\\nFood Handler Certificate\\r\\nSkills\\r\\n&nbsp;\\r\\nFood preparation\\r\\nWashing dishes\\r\\nCritical thinking\\r\\nCreativity\\r\\nRapid learning\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ebony",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resumeText\": \"Ebony Moore\\r\\nSeattle, WA | 206-555-0149 | emoore@email.com\\r\\nSummary\\r\\n&nbsp;\\r\\nDetermined Accountant with three years of experience in personal and tax accounting. Excellent skills in mathematics, communication and organization with great proficiency in various accounting software.\\r\\nEducation\\r\\n&nbsp;\\r\\nCloverfield College\\r\\nBachelor of Business Administration in accounting\\r\\nExperience\\r\\n&nbsp;\\r\\nGilmore Financial, New Orleans, LA, Certified Public Accountant\\r\\nOct. 2021 \\u2013 Current\\r\\nMeet with clients to discuss their accounting needs\\r\\nCompute taxes for clients during tax season\\r\\nMonitoring and recording activity for accounts payable and accounts receivable\\r\\nPrepare balance sheets for corporate clients\\r\\nCreate budget forecasts for clients to help with financial planning\\r\\nHarrison Money Management, New Orleans, LA, Accountant\\r\\nAug. 2020 \\u2013 Oct. 2021\\r\\nPrepared tax returns for clients during tax season\\r\\nHelped the internal audit team complete annual audits\\r\\nUpdated monthly reports to reflect the financial standings of each client\\r\\nHarrison Money Management, New Orleans, LA, Junior Accountant\\r\\nMay 2019 \\u2013 Aug. 2020\\r\\nMaintained accounts receivable and accounts payable for the department\\r\\nReviewed monthly payroll to ensure it's accurate before distribution\\r\\nPrepared financial reports to share with clients\\r\\nCertifications\\r\\n&nbsp;\\r\\nCertified Public Accountant (CPA)\\r\\nCertified Financial Analyst (CFA)\\r\\nSkills\\r\\n&nbsp;\\r\\nProficiency in accounting software\\r\\nBasic mathematics\\r\\nOrganizational skills\\r\\nAttention to detail\\r\\nCommunication skills\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "malik",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resumeText\": \"Malik Rabb\\r\\nRockville, MD | 240-555-0192 | mrabb@email.com\\r\\nSummary\\r\\n&nbsp;\\r\\nMotivated data scientist with over three years of professional experience analyzing data for managers to engage in decision-making processes. Seeking a role as a Data Scientist with the Stehr Group.\\r\\nEducation\\r\\n&nbsp;\\r\\nEast Virginia University, 2019\\r\\nBachelor of Science in computer science\\r\\nExperience\\r\\n&nbsp;\\r\\nWhiteboard Data Inc., Rockville, MD, Data Analyst\\r\\nMay 2019 - Current\\r\\nAnalyze data to find trends and patterns for decision-making\\r\\nReport on trends in data to help executives form their decisions with data\\r\\nCommunicate with executives and other data professionals to form plans based on data\\r\\nCollect data and clean it to remove duplicates and fill gaps for a well-rounded and understandable set of data\\r\\nFollowing company procedures and policies to process data effectively\\r\\nCertifications\\r\\n&nbsp;\\r\\nAdvanced Analytics Professional, SAS - 2021\\r\\nSkills\\r\\n&nbsp;\\r\\nData analysis\\r\\nCommuication\\r\\nTechnology\\r\\nMathematics\\r\\nData collection\\r\\nReporting\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sofia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resumeText\": \"Sofia Flores\\r\\nAustin, TX | 512-555-0184 | sflores@email.com\\r\\nSummary\\r\\n&nbsp;\\r\\nWell-versed Electrical Engineer with 10 years of experience in designing complex electrical systems that optimize performance and safety standards. Skilled in system analysis and design, AutoCAD software, construction regulations, electrical system safety standards and team management.\\r\\nEducation\\r\\n&nbsp;\\r\\nGreen Rivers University\\r\\nMaster's in electrical engineering\\r\\nExperience\\r\\n&nbsp;\\r\\nTennent Construction Industries | Austin, TX, Electrical Engineer\\r\\nMay 2017 \\u2013 Current\\r\\nDesign and implement electrical systems and products for over 300 customers\\r\\nDevelop standard installation processes that decreased installation times by 8% and improved customer satisfaction by 12%\\r\\nInterview customer to determine exact system needs and provide potential solutions to meet or exceed specifications\\r\\nAudit existing legacy systems to determine quality and safety\\r\\nMonitor third-party installations to ensure they meet company quality standards\\r\\nOceanClear Building Group | Austin, TX, Electrical Engineer\\r\\nSeptember 2011 \\u2013 April 2017\\r\\nCompleted system tests to verify function and safety\\r\\nMonitored system maintenance and inspections plans\\r\\nPrepared customer project quotes for different electrical systems\\r\\nCertifications\\r\\n&nbsp;\\r\\nProfessional Engineer, Engineering Institute of the Valley\\r\\nProject Management Professional, Business Professionals Training Group\\r\\nCertified Systems Engineer Professional, Electrical Engineer Training and Technical Institute\\r\\nSkills\\r\\n&nbsp;\\r\\nAutoCAD software\\r\\nElectrical design\\r\\nBuilding codes\\r\\nCalculation software\\r\\nAttention to detail\\r\\nMathematical concepts\\r\\nSystem improvement\\r\\nProject management\\r\\nSystem installation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicant_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicants_by_role_name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicants/role/Cook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicants",
+						"role",
+						"Cook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "roles_by_applicant_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicant_by_firstname",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/searchByFirstname?firstname=Ivy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"searchByFirstname"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "Ivy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicant_by_lastname",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/searchByLastname?lastname=Dalmado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"searchByLastname"
+					],
+					"query": [
+						{
+							"key": "lastname",
+							"value": "Dalmado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicant_by_email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/searchByEmail?email=ihaddington@email.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"searchByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ihaddington@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "madison_to_madison-jr",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Madison-Jr\",\r\n    \"lastname\": \"Dalmado\",\r\n    \"email\": \"madisondalmado@email.com\",\r\n    \"roleFitnessList\": [\r\n        {\r\n            \"roleName\": \"Lead Data Scientist\",\r\n            \"fitness\": 5\r\n        },\r\n        {\r\n            \"roleName\": \"Data Analyst\",\r\n            \"fitness\": 4\r\n        },\r\n        {\r\n            \"roleName\": \"Data Science Manager\",\r\n            \"fitness\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Madison-Jr\",\r\n    \"lastname\": \"Dalmado\",\r\n    \"email\": \"madisondalmado@email.com\",\r\n    \"roleFitnessList\": [\r\n        {\r\n            \"roleName\": \"Lead Data Scientist\",\r\n            \"fitness\": 5\r\n        },\r\n        {\r\n            \"roleName\": \"Data Analyst\",\r\n            \"fitness\": 4\r\n        },\r\n        {\r\n            \"roleName\": \"Data Science Manager\",\r\n            \"fitness\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicant/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicant",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
